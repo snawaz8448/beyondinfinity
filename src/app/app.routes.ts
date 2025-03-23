@@ -6,7 +6,6 @@ import { ResetPasswordComponent } from './modules/auth/reset-password/reset-pass
 import { ForgotPasswordComponent } from './modules/auth/forgot-password/forgot-password.component';
 import { DashboardComponent } from './modules/admin/dashboard/dashboard.component';
 import { PtoComponent } from './modules/admin/PTO/pto/pto.component';
-import { MapAutoCompleteComponent } from './modules/map/map-auto-complete/map-auto-complete.component';
 
 export const routes: Routes = [
     {path:'' , redirectTo:'home' , pathMatch:"full"},
@@ -19,7 +18,7 @@ export const routes: Routes = [
 
         ]
     },
-    {path:'signin' , component:MapAutoCompleteComponent},
+    {path:'signin' , component:SigninComponent},
     {path:'signup' , component:SignupComponent},
     {path:'resetpassword' , component:ResetPasswordComponent},
     {path:'forgotpassword' , component:ForgotPasswordComponent},

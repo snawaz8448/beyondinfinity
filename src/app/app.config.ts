@@ -9,8 +9,6 @@ import { ToastrModule } from 'ngx-toastr';
 
 import { routes } from './app.routes';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { AgmCoreModule } from '@agm/core';
-import { environment } from './modules/environmect/environment';
 
 export const appConfig: ApplicationConfig = {
   providers: [
