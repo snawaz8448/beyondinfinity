@@ -1,0 +1,142 @@
+.status-tab-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .arrow {
+    width: 40px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #aaa;
+    transition: background 0.3s;
+  }
+  
+  .arrow:hover {
+    background: #f3f3f3;
+  }
+  
+  .status-tabs {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    flex: 1;
+  }
+  
+  .status-tabs::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .status-tab {
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-right: 1px solid #e5e5e5;
+    white-space: nowrap; /* Prevent text from breaking */
+    min-width: fit-content; /* Auto width */
+  }
+  
+  .status-tab:last-child {
+    border-right: none;
+  }
+  
+  .status-tab.active {
+    border-bottom: 3px solid #f59e0b; /* yellow border */
+    background-color: #fef9c3;
+  }
+  
+  .tab-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Space between icon, title, and count */
+    min-height: fit-content;
+    width: fit-content;
+    min-width: 200px;
+    padding: 10px;
+  }
+  
+  .tab-content i {
+    font-size: 18px;
+    color: #6b7280; /* gray */
+  }
+  
+  .tab-content span {
+    font-size: 14px;
+    color: #374151;
+    font-weight: 500;
+  }
+  
+  .tab-content strong {
+    font-size: 16px;
+    color: #111827;
+  }
+  
+
+  .toolbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 12px;
+    background-color: #fff;
+  }
+  
+  .search-field {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 6px 10px;
+    width: 200px;
+  }
+  
+  .search-field .search-icon {
+    margin-right: 8px;
+    color: gray;
+  }
+  
+  .search-field input {
+    border: none;
+    outline: none;
+    width: 100%;
+  }
+  
+  .filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .filters button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .pe-stamp-btn {
+    background-color: #8100a5;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  
+

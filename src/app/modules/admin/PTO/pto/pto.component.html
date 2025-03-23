@@ -1,0 +1,74 @@
+<div class="main" style="height: 100%; width: 100%;  background-color: rgb(237, 237, 237);">
+    <!-- --tab section -- -->
+    <div class="status-tab-container">
+        <!-- Left Arrow -->
+        <div class="arrow" (click)="scrollLeft()">
+          &#10094;
+        </div>
+      
+        <!-- Tabs -->
+        <div class="status-tabs" #tabsWrapper>
+          <div
+            *ngFor="let tab of tabs; let i = index"
+            class="status-tab"
+            [ngClass]="{ 'active': activeTab === tab.title}"
+            (click)="onTabChange(tab.title)"
+          >
+            <div class="tab-content">
+              <i class="{{ tab.icon }}"></i>
+              <span>{{ tab.title }}</span>
+              <strong *ngIf="tab.count">{{ tab.count }}</strong>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Right Arrow -->
+        <div class="arrow" (click)="scrollRight()">
+          &#10095;
+        </div>
+      </div>
+      
+
+      <div class="toolbar-container">
+        <!-- Search -->
+        <div class="search-field">
+          <span class="search-icon">🔍</span>
+          <input type="text" placeholder="Search.." />
+        </div>
+      
+        <!-- Filters -->
+        <div class="filters">
+          <button>
+            ▼ Filter
+          </button>
+          <button>
+            ⭐ Priority
+          </button>
+          <button>
+            ▼ Client
+          </button>
+          <button>
+            ▼ Stamping Partners
+          </button>
+          <button>
+            🔄 Refresh
+          </button>
+        </div>
+      
+        <!-- Action Button -->
+        <button class="pe-stamp-btn">
+          +ADD PTO
+        </button>
+      </div>
+
+      <div class="table" style="height: calc(100% - 86px ); ">
+        <div class="newsection">
+            <app-new-section-pto></app-new-section-pto>
+        </div>
+
+  
+
+      </div>
+
+
+</div>

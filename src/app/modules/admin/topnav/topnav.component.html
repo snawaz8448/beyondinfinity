@@ -1,0 +1,50 @@
+
+<div class="container-fluid bg-light py-2 px-3  shadow-sm plan-set-bar" style="height: 100% !important;">
+    <div class="row align-items-center h-100">
+      
+      <!-- Left Section -->
+      <div class="col-2 d-flex align-items-center flex-wrap">
+          <span class="h5 mb-0 mr-2 font-weight-bold text-dark">{{sidebarData}}</span>
+      </div>
+      
+      <!-- Middle Section -->
+      <div class="col-6 d-flex align-items-center flex-wrap">
+          <!-- New Badge -->
+          <span class="badge badge-warning text-white font-weight-bold mr-2 bg-yellow-400">New</span>
+      
+          <div style="max-width: 80%;  white-space: nowrap;">
+            <span class=" bg-yellow-100 text-dark px-2 py-1 rounded font-weight-medium text-xs">
+              • Manage all your Solar Designs with WattMonk.
+            </span>
+          </div>
+          
+      </div>
+  
+      <!-- Right Section -->
+      <div class="col-4 d-flex justify-content-end align-items-center">
+        
+        <!-- Help Icon -->
+        <button class="btn btn-link text-dark">
+          <i class="fa-regular fa-circle-question fa-lg"></i>
+        </button>
+  
+        <!-- Search Icon -->
+        <button class="btn btn-link text-dark">
+          <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+        </button>
+  
+        <!-- Notification Icon with Badge -->
+        <div class="position-relative mx-2">
+          <i class="fa-regular fa-bell fa-lg text-dark"></i>
+          <span class="badge badge-danger position-absolute" style="top: -5px; right: -10px;">99+</span>
+        </div>
+  
+        <!-- Lightning Icon -->
+        <button class="btn btn-white border rounded-circle p-2 shadow-sm" (click)="openUserProfile()">
+          <i class="fa-solid fa-bolt text-warning fa-lg"></i>
+        </button>
+  
+      </div>
+  
+    </div>
+  </div>

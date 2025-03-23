@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scrollable Tabs</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f8;
+    }
+
+    .tab-header-container {
+      position: relative;
+      width: 100%;
+      height: 60px;
+      background-color: #ffffff;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .arrow {
+      width: 40px;
+      height: 100%;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: background 0.3s;
+      z-index: 1;
+    }
+
+    .arrow:hover {
+      background-color: #f0f0f0;
+    }
+
+    .tabs-wrapper {
+      overflow-x: auto;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      scroll-behavior: smooth;
+    }
+
+    .tabs-wrapper::-webkit-scrollbar {
+      display: none; /* Hide scrollbar */
+    }
+
+    .tab-button {
+      white-space: nowrap;
+      margin: 0 8px;
+      padding: 8px 16px;
+      border-radius: 20px;
+      background-color: #e0e7ff;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-weight: 500;
+    }
+
+    .tab-button:hover {
+      background-color: #6366f1;
+      color: #fff;
+    }
+
+    .arrow i {
+      font-size: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="tab-header-container">
+    <!-- Left Arrow -->
+    <div class="arrow" id="leftArrow">
+      &#9664;
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs-wrapper" id="tabsWrapper">
+      <button class="tab-button">Dashboard</button>
+      <button class="tab-button">Projects</button>
+      <button class="tab-button">Designs</button>
+      <button class="tab-button">Clients</button>
+      <button class="tab-button">Reports</button>
+      <button class="tab-button">Settings</button>
+      <button class="tab-button">Notifications</button>
+      <button class="tab-button">Support</button>
+      <button class="tab-button">Team</button>
+      <button class="tab-button">Billing</button>
+      <button class="tab-button">API</button>
+      <button class="tab-button">Integrations</button>
+      <!-- Add as many as you want -->
+    </div>
+
+    <!-- Right Arrow -->
+    <div class="arrow" id="rightArrow">
+      &#9654;
+    </div>
+  </div>
+
+  <script>
+    const tabsWrapper = document.getElementById('tabsWrapper');
+    const leftArrow = document.getElementById('leftArrow');
+    const rightArrow = document.getElementById('rightArrow');
+
+    leftArrow.addEventListener('click', () => {
+      tabsWrapper.scrollBy({ left: -150, behavior: 'smooth' });
+    });
+
+    rightArrow.addEventListener('click', () => {
+      tabsWrapper.scrollBy({ left: 150, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html>
